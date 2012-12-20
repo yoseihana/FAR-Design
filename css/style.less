@@ -1,0 +1,446 @@
+/* Import GRID */
+@import 'grid.less';
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+@total-width: 100%;
+
+/* DESIGN*/
+//Gardient
+@gardientOldBlue: #2989d8; /* Old browsers */
+@mozGardientBlue: -moz-linear-gradient(top, #2989d8 0%, #061f40 100%); /* FF3.6+ */
+@webGardientBlue: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2989d8), color-stop(100%,#061f40)); /* Chrome,Safari4+ */
+@webLinearGardientBlue: -webkit-linear-gradient(top, #2989d8 0%,#061f40 100%); /* Chrome10+,Safari5.1+ */
+@oLinearGardientBlue: -o-linear-gradient(top, #2989d8 0%,#061f40 100%); /* Opera 11.10+ */
+@msLinearGardientBlue: -ms-linear-gradient(top, #2989d8 0%,#061f40 100%); /* IE10+ */
+@linearGardientBlue: linear-gradient(to bottom, #2989d8 0%,#061f40 100%); /* W3C */
+@filterBlue: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#061f40',GradientType=0 ); /* IE6-9
+
+@gardientOldLight: #061f40; /* Old browsers */
+@gardientOldLight: #061f40;
+@mozGardientLight: -moz-linear-gradient(top, #061f40 0%, #2989d8 99%); /* FF3.6+ */
+@webGardientLight: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#061f40), color-stop(99%,#2989d8)); /* Chrome,Safari4+ */
+@webLinearGardientLight: -webkit-linear-gradient(top, #061f40 0%,#2989d8 99%); /* Chrome10+,Safari5.1+ */
+@oLinearGardientLight: -o-linear-gradient(top, #061f40 0%,#2989d8 99%); /* Opera 11.10+ */
+@msLinearGardientLight: -ms-linear-gradient(top, #061f40 0%,#2989d8 99%); /* IE10+ */
+@linearGardientLight: linear-gradient(to bottom, #061f40 0%,#2989d8 99%); /* W3C */
+@filterLight: progid:DXImageTransform.Microsoft.gradient( startColorstr='#061f40', endColorstr='#2989d8',GradientType=0 ); /* IE6-9 */
+
+//Border Radius
+@webRadius: 6px;
+@mozRadius: 6px;
+@borderRadius: 6px;
+
+//Color
+@white: white;
+@blue: #061F40;
+@red: #f21313;
+@lightRed: #fc504c;
+@pink: #f28585;
+@whiteBorder: #f2f2f2;
+@lightBlue: #2989d8;
+
+//Shadow
+@mozShadow: 5px 5px 5px 0px #cfcfcf;
+@webShadow: 5px 5px 5px 0px #cfcfcf;
+@oShadow: 5px 5px 5px 0px #cfcfcf;
+@boxShadow: 5px 5px 5px 0px #cfcfcf;
+@filterShadow:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=134, Strength=5);
+
+//Fonts
+@font-face {
+  font-family: 'SourceSansProBold';
+  src: url('./Fonts/SourceSansPro-Bold-webfont.eot');
+  src: url('./Fonts/SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./Fonts/SourceSansPro-Bold-webfont.woff') format('woff'),
+  url('./Fonts/SourceSansPro-Bold-webfont.ttf') format('truetype'),
+  url('./Fonts/SourceSansPro-Bold-webfont.svg#SourceSansProBold') format('svg');
+font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceSansProLight';
+  src: url('./fonts/SourceSansPro-Light-webfont.eot');
+  src: url('./fonts/SourceSansPro-Light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/SourceSansPro-Light-webfont.woff') format('woff'),
+  url('./fonts/SourceSansPro-Light-webfont.ttf') format('truetype'),
+  url('./fonts/SourceSansPro-Light-webfont.svg#SourceSansProLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansProRegular';
+  src: url('SourceSansPro-Regular-webfont.eot');
+  src: url('SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('SourceSansPro-Regular-webfont.woff') format('woff'),
+  url('SourceSansPro-Regular-webfont.ttf') format('truetype'),
+  url('SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@proRegular: 'SourceSansProRegular', Arial, sans-serif;
+@proBold: 'SourceSansProBold', Arial, sans-serif;
+@proLight: 'SourceSansProLight', Arial, sans-serif;
+
+/************************************************
+/* RESTE MEYER
+************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+/************************************************
+/* FIN RESTE MEYER
+************************************************/
+.clearfix() {
+  zoom: 1;
+  &:before { content: ''; display: block; }
+  &:after { content: ''; display: table; clear: both; }
+}
+
+                  /* COMMUN */
+
+body{
+
+  font-size: 16px;
+  font-family: @proLight;
+}
+
+.container, .footerContent{
+  max-width: 960px;
+  margin: 1em auto 0 auto;
+}
+
+.content{
+  .column(12);
+}
+
+a{
+  text-decoration: none;
+  color: @white;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+h1{
+  font-family: @proBold;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+  color: @red;
+}
+
+p{
+  color: @blue;
+  line-height: 1.25em;
+}
+
+                      /*  HEADER  */
+
+header{
+  height: 200px;
+}
+
+.banner{
+  height: 151px;
+  display: block;
+}
+
+header nav{
+  background: @gardientOldBlue;
+  background: @mozGardientBlue;
+  background: @webGardientBlue;
+  background: @webLinearGardientBlue;
+  background: @oLinearGardientBlue;
+  background: @msLinearGardientBlue;
+  background: @linearGardientBlue;
+  filter: @filterBlue;
+  height: 37px;
+  margin-top: 1em;
+}
+
+header li{
+  float: left;
+  padding: 0 1.88em;
+  height: 37px;
+  position: relative;
+}
+
+header li:hover{
+  background: @gardientOldLight;
+  background: @mozGardientLight;
+  background: @webGardientLight;
+  background: @webLinearGardientLight;
+  background: @oLinearGardientLight;
+  background: @msLinearGardientLight;
+  background: @linearGardientLight;
+  filter: @filterLight;
+}
+
+nav li:last-child{
+  border: none;
+}
+
+header a:hover{
+  text-decoration: none;
+}
+
+nav a{
+  font-family: @proRegular;
+  padding: 10px 0 7px 0;
+  display: inline-block;
+}
+
+.separator{
+  position: absolute;
+  right: -2px;
+  display: block;
+  color: rbga(255, 255, 255, 0);
+  top: 10px;
+  border-right: 1px solid @lightBlue;
+}
+
+                /* SLIDER */
+.slider{
+  border: 0.5em solid @blue;
+  height: 350px;
+  position: relative;
+  border-top: none;
+}
+
+.slider a{
+  display: block;
+  height: 350px;
+}
+
+.infoSlider{
+  position: absolute;
+  top: 175px;
+  left: 25px;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+  color: @blue;
+  line-height: 1.25em;
+  -webkit-border-radius: @webRadius;
+  -moz-border-radius: @mozRadius;
+  border-radius: @borderRadius;
+}
+
+            /* SECTION */
+section{
+  margin: 2em 0;
+}
+
+.blocMissions{
+  margin: 1em 0;
+}
+
+.blocMissions div{
+  .column(4);
+}
+
+.blocOuter, .blocCenter{
+  height: 375px;
+  -webkit-border-radius: @webRadius;
+  -moz-border-radius: @mozRadius;
+  border-radius: @borderRadius;
+  -moz-box-shadow: @mozShadow;
+  -webkit-box-shadow: @webShadow;
+  -o-box-shadow: @oShadow;
+  box-shadow: @boxShadow;
+  filter:@filterShadow;
+}
+
+.blocOuter{
+  background-color: @lightRed;
+}
+
+.blocOuter:hover p, .blocCenter:hover p, .blocCenter:hover h2, .blocOuter:hover h2, .blocOuter:hover span, .blocCenter:hover span{
+  color: @blue;
+}
+
+.blocOuter h2, .blocOuter p, .blocCenter h2, .blocCenter p{
+  padding: 0.5em 1em;
+}
+
+.blocOuter p, .blocCenter p{
+  line-height: 1.25em;
+  padding-top: 0em;
+  color: @white;
+}
+
+.blocCenter{
+  background-color: @lightBlue;
+}
+
+section a:hover{
+  text-decoration: none;
+}
+
+section h1{
+  font-size: 2em;
+}
+
+section h2{
+  font-family: @proBold;
+  font-size: 1.75em;
+  margin-top: 0.5em;
+}
+
+section span{
+  position: relative;
+  top: 0.5em;
+  font-size: 2.5em;
+  left: 115px;
+  margin-bottom: 0.5em;
+}
+
+.liens{
+  clear: both;
+}
+
+.liens li{
+  .column(4);
+}
+
+.liens a{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 2em 0 1em 0;
+}
+
+.liens img{
+  -moz-box-shadow: @mozShadow;
+  -webkit-box-shadow: @webShadow;
+  -o-box-shadow: @oShadow;
+  box-shadow: @boxShadow;
+  filter:@filterShadow
+}
+
+          /*FOOTER*/
+footer{
+  clear:both;
+  background-color: @blue;
+  height: 200px;
+  width: 100%;
+}
+
+.footerContent{
+
+}
+
+.footerContent div, footer nav{
+  .column(3);
+}
+
+.footerContent div, footer nav{
+  margin: 1em 0.5em 0.5em 0.5em;
+}
+
+footer nav{
+  margin-left: 1em;
+}
+
+h3{
+  color: @white;
+  font-family: @proBold;
+  margin-bottom: 0.5em;
+}
+
+footer p{
+  color: @white;
+  line-height: 1.5em;
+}
+
+footer a, footer p{
+  margin-left: 1em;
+  font-family: @proLight;
+}
+
+footer li{
+  margin: 0.25em 0;
+}
+
+footer a{
+  padding: 0;
+}
+
+/* Missions */
+
+
+#missions .slider a{
+  height: 175px;
+}
+
+.contentLeft, .contentRight{
+  .column(8);
+}
+
+.sectionLeft img, .sectionRight img{
+  .column(4);
+  padding-top: 3.2em;
+}
+
+.sectionLeft, .sectionRight{
+  clear: both;
+  margin-bottom: 1em;
+}
+
+#missions .slider{
+  height: 175px;
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+.icon-info-2:before { content: '\e8a1'; } /* '' */
+.icon-home-4:before { content: '\e9ae'; } /* '' */
+.icon-cog-4:before { content: '\e850'; } /* '' */
+.icon-mail-5:before { content: '\e99a'; } /* '' */
+.icon-check-1:before { content: '\e9a5'; } /* '' */
+.icon-plus-circled:before { content: '\e9a9'; } /* '' */
+.icon-chat-5:before { content: '\e8b1'; } /* '' */
+.icon-doc:before { content: '\e730'; } /* '' */
+.icon-logout-2:before { content: '\e854'; } /* '' */
+.icon-spin5:before { content: '\e9bb'; } /* '' */
+.icon-picture:before { content: '🌄'; } /* '\1f304' */
+.icon-graduation-cap:before { content: '🎓'; } /* '\1f393' */
+.icon-video:before { content: '🎬'; } /* '\1f3ac' */
+.icon-user-5:before { content: '\e99f'; } /* '' */
+.icon-user-3:before { content: '\e8f0'; } /* '' */
+.icon-users-1:before { content: '\e8f1'; } /* '' */
+.icon-phone-2:before { content: '\e84f'; } /* '' */
+.icon-download-4:before { content: '\e9bf'; } /* '' */
+.icon-search-5:before { content: '\e999'; } /* '' */
+.icon-link:before { content: '🔗'; } /* '\1f517' */
