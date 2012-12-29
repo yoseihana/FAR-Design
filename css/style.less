@@ -35,10 +35,10 @@
 @white: white;
 @blue: #061F40;
 @red: #f21313;
-@lightRed: #fc504c;
-@pink: #f28585;
+@deepRed: #B2191D;
+@grey: #E8DCD1;
 @whiteBorder: #f2f2f2;
-@lightBlue: #2989d8;
+@lightBlue: #143D73;
 
 //Shadow
 @mozShadow: 5px 5px 5px 0px #cfcfcf;
@@ -114,7 +114,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
   line-height: 1;
   color: black;
-  background: white;
+  background: @white;
 }
 
 ol, ul {
@@ -306,21 +306,21 @@ section{
 }
 
 .blocOuter{
-  background-color: @lightRed;
+  background-color: @deepRed;
 }
 
-.blocOuter:hover p, .blocCenter:hover p, .blocCenter:hover h2, .blocOuter:hover h2, .blocOuter:hover span, .blocCenter:hover span{
+.blocOuter:hover span, .blocCenter:hover span{
   color: @blue;
 }
 
 .blocOuter h2, .blocOuter p, .blocCenter h2, .blocCenter p{
   padding: 0.5em 1em;
+  color: @grey;
 }
 
 .blocOuter p, .blocCenter p{
   line-height: 1.25em;
   padding-top: 0em;
-  color: @white;
 }
 
 .blocCenter{
@@ -347,6 +347,7 @@ section span{
   font-size: 2.5em;
   left: 115px;
   margin-bottom: 0.5em;
+  color: @grey;
 }
 
 .liens{
@@ -423,7 +424,7 @@ footer a{
 /* Missions */
 
 
-#missions .slider a{
+#missions .slider a, #formations .slider a, #formations .slider{
   height: 175px;
 }
 
@@ -443,4 +444,33 @@ footer a{
 
 #missions .slider{
   height: 175px;
+}
+
+#missions p{
+  margin-top: 0.75em;
+}
+
+#missions p a{
+  color: @lightBlue;
+  font-family: @proBold;
+}
+
+/* Formations */
+#formations section h3{
+  color: @lightBlue;
+  margin-top: 1em;
+}
+
+#formations section ol{
+  margin: 0 0 1em 1em;
+  line-height: 1.5em;
+  list-style-type: disc;
+}
+
+.contentColonne p{
+  .column(8);
+}
+
+.contentColonne img{
+  .column(4);
 }
