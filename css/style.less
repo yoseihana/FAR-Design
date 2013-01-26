@@ -39,6 +39,7 @@
 @grey: #E8DCD1;
 @whiteBorder: #f2f2f2;
 @lightBlue: #143D73;
+@deepGrey: #615F6B;
 
 //Shadow
 @mozShadow: 5px 5px 5px 0px #cfcfcf;
@@ -285,12 +286,17 @@ section{
   margin: 2em 0;
 }
 
+section header, section footer, aside header, .content footer{
+  height: 100%;
+}
+
 .blocMissions{
   margin: 1em 0;
 }
 
 .blocMissions div{
   .column(4);
+  margin-bottom:2em;
 }
 
 .blocOuter, .blocCenter{
@@ -315,7 +321,7 @@ section{
 
 .blocOuter h2, .blocOuter p, .blocCenter h2, .blocCenter p{
   padding: 0.5em 1em;
-  color: @grey;
+  color: white;
 }
 
 .blocOuter p, .blocCenter p{
@@ -347,7 +353,10 @@ section span{
   font-size: 2.5em;
   left: 115px;
   margin-bottom: 0.5em;
-  color: @grey;
+}
+
+.blocCenter:hover span{
+  color: @deepRed;
 }
 
 .liens{
@@ -376,7 +385,7 @@ section span{
           /*FOOTER*/
 footer{
   clear:both;
-  background-color: @blue;
+  background-color: @deepGrey;
   height: 200px;
   width: 100%;
 }
@@ -423,27 +432,19 @@ footer a{
 
 /* Missions */
 
-
-#missions .slider a, #formations .slider a, #formations .slider{
+#missions .slider a, #formations .slider a, #formations .slider a, #equipe .slider a, #contacts .slider a, #missions .slider,
+#formations .slider, #formations .slider, #equipe .slider, #liens .slider, #liens .slider a,
+#membre .slider, #membre .slider a{
   height: 175px;
 }
 
-.contentLeft, .contentRight{
-  .column(8);
-}
-
-.sectionLeft img, .sectionRight img{
-  .column(4);
-  padding-top: 3.2em;
-}
-
-.sectionLeft, .sectionRight{
-  clear: both;
+.contentEquipe{
+  .column(12);
   margin-bottom: 1em;
 }
 
-#missions .slider{
-  height: 175px;
+.contentEquipe figure, .sectionRight figure{
+  .column(4);
 }
 
 #missions p{
@@ -473,4 +474,30 @@ footer a{
 
 .contentColonne img{
   .column(4);
+}
+
+/*  Contact */
+#contacts section{
+  .column(8);
+}
+aside{
+  .column(4);
+}
+
+label{
+  display: block;
+}
+
+/* Liens */
+.lien img{
+  .column(12);
+}
+
+.lienLeft, .lienRight{
+  .column(6);
+  margin-top: 1em;
+}
+
+.url a{
+  color: @lightBlue;
 }
