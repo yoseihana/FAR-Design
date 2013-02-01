@@ -345,6 +345,7 @@ section h2{
   font-family: @proBold;
   font-size: 1.75em;
   margin-top: 0.5em;
+  color: @blue;
 }
 
 section span{
@@ -380,6 +381,21 @@ section span{
   -o-box-shadow: @oShadow;
   box-shadow: @boxShadow;
   filter:@filterShadow
+}
+
+section ul{
+  margin-top: 1em;
+}
+
+section li{
+  color: @blue;
+  list-style-type: square;
+  line-height: 1.5em;
+  margin-left: 2em;
+}
+
+ul a{
+  color: @blue;
 }
 
           /*FOOTER*/
@@ -434,17 +450,8 @@ footer a{
 
 #missions .slider a, #formations .slider a, #formations .slider a, #equipe .slider a, #contacts .slider a, #missions .slider,
 #formations .slider, #formations .slider, #equipe .slider, #liens .slider, #liens .slider a,
-#membre .slider, #membre .slider a{
+#membre .slider, #membre .slider a, #contacts .slider, #contacts .slider a,  #publications .slider, #publications .slider a{
   height: 175px;
-}
-
-.contentEquipe{
-  .column(12);
-  margin-bottom: 1em;
-}
-
-.contentEquipe figure, .sectionRight figure{
-  .column(4);
 }
 
 #missions p{
@@ -454,6 +461,20 @@ footer a{
 #missions p a{
   color: @lightBlue;
   font-family: @proBold;
+}
+
+/* Equipe */
+.contentEquipe{
+  .column(4);
+  margin-bottom: 1em;
+}
+
+.contentEquipe figure, .sectionRight figure{
+  margin: 0;
+}
+
+.infoContact{
+  .column(12);
 }
 
 /* Formations */
@@ -479,13 +500,60 @@ footer a{
 /*  Contact */
 #contacts section{
   .column(8);
+  margin-top: 1em;
 }
 aside{
   .column(4);
+  margin-top: 1em;
+  background-color: @blue;
+  -webkit-border-radius: @webRadius;
+  -moz-border-radius: @mozRadius;
+  border-radius: @borderRadius;
+}
+
+aside h1{
+  color: @white;
+  padding: 1em 0 0 1em;
 }
 
 label{
   display: block;
+  margin-bottom: 0.5em;
+  color: @deepRed;
+  font-family: @proBold;
+}
+
+input{
+  height: 25px;
+  width:250px;
+  margin-bottom: 1.5em;
+}
+
+input[type="radio"]{
+  width: 30px;
+}
+
+input[type="submit"]{
+  .column(6);
+  .push(6);
+  margin-top: 1em;
+}
+
+#contacts li{
+  list-style-type: none;
+}
+
+.contactSecretaire{
+  padding: 1em;
+}
+
+.contactSecretaire p{
+  color: @white;
+}
+
+fieldset{
+  border: 1px solid @blue;
+  padding: 1em;
 }
 
 /* Liens */
@@ -500,4 +568,31 @@ label{
 
 .url a{
   color: @lightBlue;
+}
+
+/* Publications */
+#publications section{
+  .column(10);
+  margin-top: 1em;
+}
+
+#publications .right{
+  .push(2);
+  text-align: right;
+}
+
+/* Membre */
+#membre form{
+  margin-top: 1em;
+
+}
+
+#membre fieldset{
+  .column(4);
+  .push(3.5)
+}
+
+#membre input[type="submit"]{
+    .column(5);
+  .push(6);
 }
