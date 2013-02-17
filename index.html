@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="./css/fontello/style.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="./css/fontello/animation.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="./css/fontello/fontello-codes.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="./css/fontello/fontello-embedded.css" media="screen"/>
@@ -22,11 +21,13 @@
     <link rel="stylesheet" type="text/css" href="./css/fontello/fontello.css" media="screen"/>
 
 </head>
-<body>
+<body id="home">
 <div class="container">
     <div class="content">
         <header>
-            <a href="#" title="Vers la page d'Accueil" class="banner"><img src="./img/header.png" alt="La Form'Action André Renard"/></a>
+            <div class="banner">
+                <a href="#" title="Vers la page d'Accueil"><img src="./img/header.png" alt="La Form'Action André Renard"/></a>
+            </div>
             <nav>
                 <ol>
                     <li>
@@ -38,11 +39,15 @@
                         <span class="separator">|</span>
                     </li>
                     <li>
+                        <a href="./html/equipe.html" title="Vers la page de l'Equipe">Equipe</a>
+                        <span class="separator">|</span>
+                    </li>
+                    <li>
                         <a href="./html/publications.html" title="Vers la page des Publications">Publications</a>
                         <span class="separator">|</span>
                     </li>
                     <li>
-                        <a href="./html/equipe.html" title="Vers la page de l'Equipe">Equipe</a>
+                        <a href="./html/audiovisuelle.html" title="Vers la page de la Cellule audiovisuelle">Audiovisuelle</a>
                         <span class="separator">|</span>
                     </li>
                     <li>
@@ -58,37 +63,66 @@
                     </li>
                 </ol>
             </nav>
+            <div class="slider">
+                <figure>
+                    <a href="./html/missions.html" title="Vers la page Missions"><img src="./img/sliderAccMiss.jpg" alt="Les missions de la FAR"/>
+
+                        <div class="infoSlider">
+                            <h1>Nos missions</h1>
+
+                            <p>Les missions de la FAR sont diverses et rentre dans un cadre de réflexion et volontés transformatrice de la sociétés.</p>
+                        </div>
+                    </a>
+
+                    <p class="precedent">
+                        <
+                    </p>
+
+                    <p class="suivant">
+                        >
+                    </p>
+
+                </figure>
+                <figure>
+                    <a href="./html/liens.html" title="Vers la page Liens"><img src="./img/sliderAccMLi.jpg" alt="Les liens de la FAR"/>
+
+                        <div class="infoSlider">
+                            <h1>Nos autres sites partenaires</h1>
+
+                            <p>De part sa diversité, la FAR s'engage dans d'autres sites connexent à leurs idées.</p>
+                        </div>
+                    </a>
+
+                    <p class="precedent">
+                        <
+                    </p>
+
+                    <p class="suivant">
+                        >
+                    </p>
+
+                </figure>
+                <figure class="lastFigure">
+                    <a href="./html/publications.html" title="Vers la page Publications"><img src="./img/sliderAccPub.jpg" alt="Les Publications de la FAR"/>
+
+                        <div class="infoSlider">
+                            <h1>Nos publications</h1>
+
+                            <p>Dans un esprit de réflexion, la FAR prend part au partage d'idées et de réflexions avec ses publications</p>
+                        </div>
+                    </a>
+
+                    <p class="precedent">
+                        <
+                    </p>
+
+                    <p class="suivant">
+                        >
+                    </p>
+
+                </figure>
+            </div>
         </header>
-        <div class="slider">
-            <a href="./html/missions.html" title="Vers la page Missions"><img src="./img/sliderAccMiss.jpg" alt="Les missions de la FAR"/>
-
-                <div class="infoSlider">
-                    <h1>Nos missions</h1>
-
-                    <p>I love bear claw I love I love cotton candy. Candy pie sugar plum marzipan fruitcake. Fruitcake jelly beans bonbon pudding bear claw jelly-o pastry faworki</p>
-                </div>
-            </a>
-        </div>
-        <div class="slider">
-            <a href="./html/liens.html.html" title="Vers la page Liens"><img src="./img/sliderAccMLi.jpg" alt="Les liens de la FAR"/>
-
-                <div class="infoSlider">
-                    <h1>Nos autres sites partenaires</h1>
-
-                    <p>I love bear claw I love I love cotton candy. Candy pie sugar plum marzipan fruitcake. Fruitcake jelly beans bonbon pudding bear claw jelly-o pastry faworki</p>
-                </div>
-            </a>
-        </div>
-        <div class="slider">
-            <a href="./html/publications.html.html" title="Vers la page Publications"><img src="./img/sliderAccPub.jpg" alt="Les Publications de la FAR"/>
-
-                <div class="infoSlider">
-                    <h1>Nos publication</h1>
-
-                    <p>I love bear claw I love I love cotton candy. Candy pie sugar plum marzipan fruitcake. Fruitcake jelly beans bonbon pudding bear claw jelly-o pastry faworki</p>
-                </div>
-            </a>
-        </div>
         <section>
             <header>
                 <h1>
@@ -96,49 +130,71 @@
                 </h1>
             </header>
             <p>
-                I love bear claw I love I love cotton candy. Candy pie sugar plum marzipan fruitcake. Fruitcake jelly beans bonbon pudding bear claw jelly-o pastry faworki. Marshmallow I love candy canes dessert candy pastry danish topping. Chocolate cake I love dessert cake tootsie roll toffee
-                halvah
-                tootsie roll caramels. Gummies oat cake sweet roll dessert ice cream croissant dessert gummi bears. Apple pie pie jelly-o pastry chocolate toffee. Powder jelly chupa chups donut muffin cake. Gummi bears jelly lollipop lollipop sweet ice cream. Topping toffee sesame snaps. Halvah I
-                love
-                cookie cake I love. Gingerbread ice cream sesame snaps. Macaroon oat cake sugar plum. Soufflé jelly cake.
-                I love I love sugar plum marshmallow chocolate pastry muffin jelly-o oat cake. Icing dessert cotton candy cheesecake sugar plum macaroon jelly beans I love. Halvah tiramisu marzipan tiramisu bear claw sesame snaps. Wypas icing cookie chocolate bar tiramisu apple pie liquorice
-                tiramisu I
-                love. Sweet cake candy chupa chups apple pie chupa chups powder I love. Caramels icing chocolate jelly jelly beans. Dragée donut I love wafer macaroon wafer chupa chups chocolate. Sweet cotton candy fruitcake caramels liquorice powder. Marshmallow brownie gummi bears faworki
-                applicake
-                ice
-                cream macaroon oat cake ice cream. Ice cream chupa chups lollipop brownie marshmallow chocolate bar. Halvah toffee jujubes. Cupcake pastry jelly beans I love topping.
+                La FAR en deux mots :
+                La FAR est une association sans but lucratif créée en 1963 à Liège (Belgique), après le décès du leader syndical des métallurgistes FGTB liégeois et wallon André Renard (1911-1962).
+                Equipe pluridiciplinaire, elle inscrit ses interventions dans les principes de base de cette organisation en appuyant les volontés transformatrices de la société, de renforcement de la démocratie sociale, de contrôle et de critique du système.
             </p>
-            <ul>
+
+            <p>
+                La FAR compte une quinzaine de collaborateurs qui traitent les questions relatives à l’économie en général, au suivi des CE et CPPT, à l’organisation du travail, aux conseils juridiques aux délégués et aux permanents. Elle accorde une attention particulière à l’économie sociale et
+                tente de proposer des analyses qui mettent en évidence de possibles alternatives au système économico-politique actuel.
+            </p>
+            <ul class="linkTo">
                 <li>
-                    <a href="../html/missions.html">A propos de la Form'Action André Renard et ses buts</a>
+                    <a href="./html/missions.html">
+                        <figure>
+                            <img src="img/cercleMissions.png">
+                        </figure>
+                        <p>A propos de la Form'Action André Renard et ses buts</p></a>
                 </li>
                 <li>
-                    <a href="../html/publications.html">Toutes les publications réalisées par la Form'Action André Renard</a>
+                    <a href="./html/publications.html">
+                        <figure>
+                            <img src="img/cercleMissions.png">
+                        </figure>
+                        <p>Toutes les publications réalisées par la Form'Action André Renard</p></a>
                 </li>
                 <li>
-                    <a href="../html/equipe.html">Pour mieux connaitre l'équipe de la Form'Action André Renard</a>
+                    <a href="./html/equipe.html">
+                        <figure>
+                            <img src="img/cercleEquipe.png">
+                        </figure>
+                        <p>Pour mieux connaitre l'équipe de la Form'Action André Renard</p></a>
                 </li>
                 <li>
-                    <a href="../html/liens.html">Tous les sites de la Form'Action André Renard et des sites partenaires</a>
+                    <a href="./html/liens.html">
+                        <figure>
+                            <img src="img/cercleLien.png">
+                        </figure>
+                        <p>Tous les sites de la Form'Action André Renard et des sites partenaires</p></a>
                 </li>
                 <li>
-                    <a href="../html/membre.html">Espace de partage de document pour les membres des formations de la Form'ACtion André Renard</a>
+                    <a href="./html/membre.html">
+                        <figure>
+                            <img src="img/cercleEspace.png">
+                        </figure>
+                        <p>Espace de partage de document pour les membres des formations de la Form'Action André Renard</p></a>
+                </li>
+                <li>
+                    <a href="./html/contacts.html">
+                        <figure>
+                            <img src="img/cercleContact.png">
+                        </figure>
+                        <p>Pour contacter la Form'Action André Renard ou consulter nos horaires</p></a>
                 </li>
             </ul>
-            <footer>
-                <div class="liens">
-                    <ul>
-                        <li>
-                            <a href="http://www.6com.be/4/actu_une.cfm" title="Vers le site de 6com"><img src="./img/logo6com.jpeg" alt="Logo du site 6com" title="Site 6com"/></a>
-                        </li>
-                        <li>
-                            <a href="http://dautresreperes.typepad.com/" title="Vers le site de D'autres repères"><img src="./img/logodar.jpeg" alt="Logo du site de D'autres repères" title="Site de D'autres repères"/></a>
-                        </li>
-                        <li>
-                            <a href="http://www.far.be/vitrinevideo/index.html" title="Vers le site de Vitrine audiovisuelle"><img src="./img/logovitrineaudio.jpeg" title="Vitrine Audiovisuelle" alt="Logo du site de Vitrine Audiovisuelle"/></a>
-                        </li>
-                    </ul>
-                </div>
+            <footer class="liens">
+                <ul>
+                    <li>
+                        <a href="http://www.6com.be/4/actu_une.cfm" title="Vers le site de 6com"><img src="./img/logo6com.jpeg" alt="Logo du site 6com" title="Site 6com"/></a>
+                    </li>
+                    <li>
+                        <a href="http://dautresreperes.typepad.com/" title="Vers le site de D'autres repères"><img src="./img/logodar.jpeg" alt="Logo du site de D'autres repères" title="Site de D'autres repères"/></a>
+                    </li>
+                    <li>
+                        <a href="http://www.far.be/vitrinevideo/index.html" title="Vers le site de Vitrine audiovisuelle"><img src="./img/logovitrineaudio.jpeg" title="Vitrine Audiovisuelle" alt="Logo du site de Vitrine Audiovisuelle"/></a>
+                    </li>
+                </ul>
             </footer>
 
         </section>
