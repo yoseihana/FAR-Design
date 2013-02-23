@@ -153,7 +153,6 @@ blockquote, q {
                   /* COMMUN */
 
 body{
-
   font-size: 16px;
   font-family: @proLight;
 }
@@ -212,7 +211,6 @@ header nav{
 
 header li{
   float: left;
-  padding: 0 1.25em;
   height: 37px;
   position: relative;
 }
@@ -230,7 +228,6 @@ header li:hover{
 
 nav li:last-child{
   border: none;
-  padding-right: 3em;
 }
 
 header a{
@@ -247,7 +244,7 @@ header p{
 
 nav a{
   font-family: @proRegular;
-  padding: 10px 0 7px 0;
+  padding: 0.75em 1.4em 0.5em 1.4em;
   display: inline-block;
 }
 
@@ -318,7 +315,7 @@ section{
   margin: 2em 0;
 }
 
-section header, aside header, .liens{
+section header, .liens{
   height: 100%;
   background-color: #ffffff;
 }
@@ -406,7 +403,7 @@ ul a{
           /*FOOTER*/
 footer{
   clear:both;
-  background-color: @deepGrey;
+  background-image: url('../img/footer.png');
   height: 200px;
   width: 100%;
 }
@@ -427,7 +424,7 @@ footer nav{
   margin-left: 1em;
 }
 
-h3{
+h3, legend{
   color: @white;
   font-family: @proBold;
   margin-bottom: 0.5em;
@@ -471,6 +468,7 @@ footer a{
 .blocMissions div{
   .column(4);
   margin-bottom:2em;
+
 }
 
 .blocOuter, .blocCenter{
@@ -486,7 +484,7 @@ footer a{
 }
 
 .blocOuter{
-  background-color: @deepRed;
+  background-image: url('../img/blocOuter.png');
 }
 
 .blocOuter span, .blocCenter span{
@@ -517,7 +515,7 @@ footer a{
 }
 
 .blocCenter{
-  background-color: @lightBlue;
+  background-image: url('../img/blocCenter.png');
 }
 
 #missions p a{
@@ -527,7 +525,7 @@ footer a{
 
 .infoBanner{
   top: 125px;
-  width: 150px;
+  width: 175px;
   padding: 0.5em 0.5em 0 0.5em;
 }
 
@@ -566,7 +564,7 @@ footer a{
 }
 
 /* Formations */
-#formations section h3{
+#formations section h3, legend{
   color: @lightBlue;
   margin-top: 1em;
 }
@@ -590,7 +588,7 @@ footer a{
   width: 250px;
 }
 
-.methodologies{
+.methodologies, .youtubeChaine{
   clear: both;
 }
 
@@ -601,7 +599,7 @@ footer a{
 }
 aside{
   .column(4);
-  margin-top: 1em;
+  margin-top: 4.5em;
   background-color: @blue;
   -webkit-border-radius: @webRadius;
   -moz-border-radius: @mozRadius;
@@ -646,6 +644,7 @@ input[type="submit"]{
 
 .contactSecretaire p{
   color: @white;
+  margin-bottom: 0;
 }
 
 fieldset{
@@ -692,4 +691,9 @@ fieldset{
 #membre input[type="submit"]{
     .column(5);
   .push(6);
+}
+
+/*  Audiovisuel */
+.video, .contact{
+  margin-bottom: 0;
 }
