@@ -35,10 +35,10 @@
 @blue: #061F40;
 @red: #f21313;
 @deepRed: #b2172d;
-@grey: #E8DCD1;
+@grey: #CFCFCF;
 @whiteBorder: #f2f2f2;
 @lightBlue: #1E69AA;
-@deepGrey: #615F6B;
+@deepGrey: #3D3D3D;
 
 //Shadow
 @mozShadow: 5px 5px 5px 0px #cfcfcf;
@@ -166,6 +166,10 @@ body{
   .column(12);
 }
 
+img{
+  border-bottom: 5px solid #cfcfcf;
+}
+
 a{
   text-decoration: none;
   color: @lightBlue;
@@ -265,6 +269,10 @@ nav a{
   border-top: none;
 }
 
+.slider img, header img, .linkTo img, .liens img{
+  border-bottom: none;
+}
+
 #home .slider{
   top:-1em;
 }
@@ -316,6 +324,7 @@ section{
 }
 
 section header, .liens{
+  border: none;
   height: 100%;
   background-color: #ffffff;
 }
@@ -403,8 +412,9 @@ ul a{
           /*FOOTER*/
 footer{
   clear:both;
-  background-image: url('../img/footer.png');
-  height: 200px;
+  border-top:5px solid rgb(207, 207, 207);
+  background-image: url('../img/footer.jpg');
+  height: 250px;
   width: 100%;
 }
 
@@ -438,7 +448,7 @@ footer p{
 footer a, footer p{
   margin-left: 1em;
   font-family: @proLight;
-  color: @white
+  color: @grey;
 }
 
 footer li{
@@ -449,11 +459,16 @@ footer a{
   padding: 0;
 }
 
-/* Missions */
+footer h3{
+  border-bottom: 1px solid @deepGrey;
+  padding: 0.5em;
+}
 
+/* Missions */
 #missions .slider a, #formations .slider a, #formations .slider a, #equipe .slider a, #contacts .slider a, #missions .slider,
 #formations .slider, #formations .slider, #equipe .slider, #liens .slider, #liens .slider a,
-#membre .slider, #membre .slider a, #contacts .slider, #contacts .slider a,  #publications .slider, #publications .slider a{
+#membre .slider, #membre .slider a, #contacts .slider, #contacts .slider a,  #publications .slider, #publications .slider a,
+#cours .slider, #cours .slider a{
   height: 175px;
 }
 
@@ -593,14 +608,14 @@ footer a{
 }
 
 /*  Contact */
-#contacts section{
+#contacts section, #cours section{
   .column(8);
-  margin-top: 1em;
+  margin-top: 2em;
 }
 aside{
   .column(4);
-  margin-top: 4.5em;
-  background-color: @blue;
+  margin-top: 6em;
+  background-image: url(../img/aside.jpg);
   -webkit-border-radius: @webRadius;
   -moz-border-radius: @mozRadius;
   border-radius: @borderRadius;
@@ -611,27 +626,69 @@ aside h1{
   padding: 1em 0 0 1em;
 }
 
-label{
+/*label{
   display: block;
   margin-bottom: 0.5em;
   color: @deepRed;
   font-family: @proBold;
-}
+}*/
 
 input{
   height: 25px;
   width:250px;
   margin-bottom: 1.5em;
+  border: 1px @grey dashed;
+  background-color: #f9f9f9;
+  display: block;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="password"]:focus{
+  background: @grey;
+  border:1px solid #f9f9f;
+  color:@deepGrey;
+}
+
+textarea{
+  border: 1px @grey dashed;
+  background-color: #f9f9f9;
+}
+
+form ul{
+  margin-top: 0;
+}
+
+form li{
+  display: inline-block;
 }
 
 input[type="radio"]{
   width: 30px;
+  display: inline;
 }
 
 input[type="submit"]{
   .column(6);
   .push(6);
   margin-top: 1em;
+  -webkit-border-radius: @webRadius;
+  -moz-border-radius: @mozRadius;
+  border-radius: @borderRadius;
+  border: 1px solid @grey;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+}
+
+input[type="submit"]:hover{
+  background: -moz-linear-gradient(top, #e6e6e6, #ffffff);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#ffffff));
+  background: -webkit-linear-gradient(top, #e6e6e6, #ffffff);
+  background: -o-linear-gradient(top, #e6e6e6, #ffffff);
+  background: linear-gradient(to bottom, #e6e6e6, #ffffff);
+  cursor: pointer;
 }
 
 #contacts li{
@@ -648,8 +705,12 @@ input[type="submit"]{
 }
 
 fieldset{
-  border: 1px solid @blue;
+  border: 1px solid @grey;
   padding: 1em;
+}
+
+legend{
+  padding: 0.5em;
 }
 
 /* Liens */
@@ -659,17 +720,21 @@ fieldset{
 
 .lienLeft, .lienRight{
   .column(6);
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .url a{
   color: @lightBlue;
 }
 
+.lien{
+  margin-bottom: 3em;
+}
+
 /* Publications */
 #publications section{
   .column(10);
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 #publications .right{
@@ -697,3 +762,42 @@ fieldset{
 .video, .contact{
   margin-bottom: 0;
 }
+
+.youtubeChaine li, .youtubeVideo li{
+  list-style-type: none;
+}
+
+/* Cours */
+aside a{
+  color:@white;
+}
+
+aside ol{
+  padding: 1em;
+}
+aside li{
+  margin-bottom: 0.5em;
+}
+#cours aside{
+  margin-top: 7em;
+}
+
+.niveau{
+  background-color: @deepRed;
+  margin-bottom: 2em;
+}
+
+.niveau p{
+  padding: 0.5em 0.5em;
+  color: @white;
+  font-family: @proBold;
+}
+
+#cours li{
+  list-style-type: none;
+}
+
+.niveau li:after{
+  content: "+";
+}
+

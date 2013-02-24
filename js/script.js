@@ -1,5 +1,6 @@
 (function ($) {
     var $slider = $('.slider figure');
+    var $niveau = $('.niveau');
     var delay = 5000;
 
     //Slider accueil
@@ -32,6 +33,10 @@
     //Load de routine
     $(function () {
         $slider.not(":first").hide();
+        console.log('test');
+        $niveau.find('ol').hide();
+
+        $niveau.on('click', showGrade);
 
         setInterval(switchImg, delay);
                 $('.precedent').on('click', previousImg);
