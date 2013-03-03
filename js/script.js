@@ -64,7 +64,7 @@
         $slider.not(":first").hide();
         $niveau.find('li').hide();
 
-        $niveau.on('click', showYear);
+        //$niveau.on('click', showYear);
 
         setInterval(switchImg, delay);
                 $('.precedent').on('click', previousImg);
