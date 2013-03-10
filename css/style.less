@@ -562,11 +562,6 @@ footer h3{
   background-image: url('../img/blocCenter.png');
 }
 
-#missions p a{
-  color: @lightBlue;
-  font-family: @proBold;
-}
-
 .infoBanner{
   top: 125px;
   width: 175px;
@@ -665,7 +660,7 @@ aside{
 
 aside h1, aside h2, aside p, aside dl{
   color: @white;
-  padding: 1em 0 0 1em;
+  padding: 1em 1em 0 1em;
 }
 
 aside h2, aside dt{
@@ -845,12 +840,49 @@ legend{
 }
 
 /*  Audiovisuel */
-.video, .contact{
-  margin-bottom: 0;
+#audiovisuel .contentColonne{
+  .column(8);
 }
 
-.youtubeChaine li, .youtubeVideo li{
+.contentColonne iframe{
+  margin-top: 1em;
+}
+
+#audiovisuel aside{
+  margin-top: 2.5em;
+}
+
+.films{
+ display: inline-block;
+}
+
+.films li{
   list-style-type: none;
+  .column(12);
+  margin-bottom: 1em;
+}
+
+.films iframe,  .films div{
+  .column(6);
+  margin-bottom: 1em;
+  height: 315px;
+}
+
+#audiovisuel section h3{
+  color: @lightBlue;
+}
+
+#audiovisuel section a{
+  color: @red;
+}
+
+.autresFilms{
+  width: 100%;
+}
+
+#audiovisuel .linkTo{
+  display: inline-block;
+  width: 100%;
 }
 
 /* Cours */
