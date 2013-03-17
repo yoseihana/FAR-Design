@@ -20,6 +20,23 @@
     <link rel="stylesheet" type="text/css" href="./css/fontello/fontello-ie7.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="./css/fontello/fontello.css" media="screen"/>
 
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        var pluginUrl =
+                '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+        _gaq.push(['_setAccount', 'UA-38596258-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
 </head>
 <body id="home">
 <div class="container">
@@ -37,6 +54,17 @@
                     <li>
                         <a href="./html/missions.html" title="Vers la page des Missions">Missions</a>
                         <span class="separator">|</span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="./html/formations.html" title="Vers la page des Formations">Formations</a>
+                            </li>
+                            <li>
+                                <a href="./html/expertise.html" title="Vers la page des Expretises">Expertises</a>
+                            </li>
+                            <li>
+                                <a href="./html/publication.html" title="Vers la page des Publications">Publications</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="./html/equipe.html" title="Vers la page de l'Equipe">Equipe</a>
@@ -59,7 +87,7 @@
                         <span class="separator">|</span>
                     </li>
                     <li>
-                        <a href="./html/membre.html" title="Vers la page de l'espace Membre" class="icon-user-3">Espace formations</a>
+                        <a href="./html/membre.html" title="Vers la page de l'espace Membre" class="icon-user-1">Espace formations</a>
                     </li>
                 </ol>
             </nav>

@@ -1,6 +1,7 @@
 (function ($) {
     var $slider = $('.slider figure');
     var $niveau = $('.niveau');
+    var $submenu = $('.submenu');
     var delay = 5000;
 
     //Slider accueil

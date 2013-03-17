@@ -213,6 +213,29 @@ header nav{
   margin-top: 1em;
 }
 
+.submenu{
+  display: none;
+  z-index: 3;
+  background-color: @lightBlue;
+}
+.submenu a{
+  color: #ffffff;
+  padding: 0.75em 0.55em;
+}
+
+.submenu li:hover{
+  background: none;
+}
+
+.submenu a:hover{
+  color: @blue;
+}
+
+nav li:hover .submenu{
+  display: inline-block;
+  position: absolute;
+}
+
 header li{
   float: left;
   height: 37px;
@@ -387,7 +410,7 @@ section h2{
   color: @blue;
 }
 
-section span{
+section span, aside span{
   position: relative;
   top: 0.5em;
   font-size: 2.5em;
@@ -531,7 +554,7 @@ footer h3{
   background-image: url('../img/blocOuter.png');
 }
 
-.blocOuter span, .blocCenter span{
+.blocOuter span, .blocCenter span, aside span{
   color: @blue;
 }
 
@@ -618,6 +641,10 @@ footer h3{
   margin-bottom: 0.25em;
 }
 
+.contentEquipe p{
+  margin-bottom: 0.25em;
+}
+
 /* Formations */
 #formations section h3, legend{
   color: @lightBlue;
@@ -647,6 +674,10 @@ footer h3{
   clear: both;
 }
 
+.imgBug{
+  margin-top:-2.3em;
+}
+
 /*  Contact */
 #contacts section, #cours section{
   .column(8);
@@ -656,11 +687,16 @@ aside{
   .column(4);
   margin-top: 6em;
   background-image: url(../img/blocCenter.png);
+  height: 100%;
+}
+
+aside p:last-child{
+  margin-bottom: 1em;
 }
 
 aside h1, aside h2, aside p, aside dl{
   color: @white;
-  padding: 1em 1em 0 1em;
+  padding: 2em 1em 0 1em;
 }
 
 aside h2, aside dt{
@@ -796,7 +832,9 @@ legend{
 
 /* Liens */
 .lien img{
-  .column(12);
+  .column(3);
+  margin-bottom: 0.25em;
+  margin-right: 1em;
 }
 
 .lienLeft, .lienRight{
@@ -813,14 +851,47 @@ legend{
 }
 
 /* Publications */
-#publications section{
-  .column(10);
-  margin-top: 2em;
+#publications .blocOuter, #publications .blocCenter{
+  .column(5.5);
+  margin-bottom: 5em;
+  height: 500px;
 }
 
-#publications .right{
-  .push(2);
-  text-align: right;
+#publications .impaire{
+  .push(1);
+}
+
+#publications header{
+  background: none;
+  color: @white;
+}
+
+#publications .blocOuter:hover p,#publications .blocOuter:hover h2,#publications .blocCenter:hover p,#publications .blocCenter:hover h2{
+  color: @white;
+}
+
+#publications .blocOuter:hover span, #publications .blocCenter:hover span{
+  color: @blue;
+}
+
+#publications section span{
+  left: 175px;
+}
+
+#publications figure{
+    .column(12);
+}
+
+#publications figure img{
+  .column(5);
+  .push(3.5);
+  margin-bottom: 1em;
+}
+
+#publications .blocOuter a, #publications .blocCenter a{
+  text-align: center;
+  display: block;
+  color: @white;
 }
 
 /* Membre */
@@ -948,5 +1019,34 @@ aside li{
 }
 
 .thematique p, .thematique span{
-  color: @deepGrey;
+  color: @deepRed;
+}
+
+.thematique li{
+  .column(3);
+  height: 100px;
+  text-align: center;
+}
+
+li.pdf{
+  /*background-image: url('../img/pdf.png');
+  background-repeat: no-repeat;
+  background-position: 0 -70px;*/
+}
+
+#cours .secondSidebar{
+  margin-top: 2em;
+}
+
+.document span{
+  .column(12);
+  font-size: 2.5em;
+  color: @blue;
+  padding: 0em;
+}
+
+.document p{
+  font-family: @proRegular;
+  font-size: 0.75em;
+  color: @blue;
 }
