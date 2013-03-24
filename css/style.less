@@ -271,8 +271,15 @@ header p{
 
 nav a{
   font-family: @proRegular;
-  padding: 0.75em 1.45em 0.5em 1.45em;
+  padding: 0.75em 1.5em 0.5em 1.5em;
   display: inline-block;
+}
+
+/* hack Chrome / Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  nav a{
+    padding: 0.75em 1.475em 0.5em 1.475em;
+  }
 }
 
 .separator{
@@ -694,13 +701,18 @@ aside p:last-child{
   margin-bottom: 1em;
 }
 
-aside h1, aside h2, aside p, aside dl{
+aside h1, aside dl{
   color: @white;
   padding: 2em 1em 0 1em;
 }
 
-aside h2, aside dt{
+aside h2, aside dt, aside p{
   font-family: @proRegular;
+  color: @white;
+}
+
+aside h2, aside p{
+  padding: 0.5em 1em 0 1.2em;
 }
 
 aside dd{
@@ -751,6 +763,14 @@ input[type="text"]:focus, textarea:focus, input[type="password"]:focus{
 textarea{
   border: 1px @grey dashed;
   background-color: #f9f9f9;
+  width: 95%;
+}
+
+/* hack Chrome / Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  textarea{
+    width: 100%;
+  }
 }
 
 form ul{
