@@ -24,7 +24,7 @@
 <div class="container">
     <div class="content">
         <header>
-            <a href="../index.html" title="Vers la page d'Accueil" class="banner"><img src="../img/header.png" alt="La Form'Action André Renard"/></a>
+            <a href="../index.html" title="Vers la page d'Accueil" class="banner"><img src="../img/headerbis.jpg" alt="La Form'Action André Renard"/></a>
             <nav>
                 <ol>
                     <li>
@@ -34,7 +34,7 @@
                     <li>
                         <a href="missions.html" title="Vers la page des Missions">Missions</a>
                         <span class="separator">|</span>
-                        <ul class="submenu">
+                        <!--<ul class="submenu">
                             <li>
                                 <a href="formations.html" title="Vers la page des Formations">Formations</a>
                             </li>
@@ -44,10 +44,14 @@
                             <li>
                                 <a href="publication.html" title="Vers la page des Publications">Publications</a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </li>
+                    <!-- <li>
+                         <a href="equipe.html" title="Vers la page de l'Equipe">Equipe</a>
+                         <span class="separator">|</span>
+                     </li>-->
                     <li>
-                        <a href="equipe.html" title="Vers la page de l'Equipe">Equipe</a>
+                        <a href="formations.html" title="Vers la page des Formations">Formations</a>
                         <span class="separator">|</span>
                     </li>
                     <li>
@@ -86,9 +90,6 @@
             <div class="sectionContent">
                 <form action="#" method="post">
                     <fieldset>
-                        <legend>
-                            Nous contacter
-                        </legend>
                         <!-- <label for="nom">
                             Nom
                         </label>-->
@@ -101,8 +102,8 @@
                             Civilité
                         </label>
                         <ul>
-                            <li><input type="radio" value="F" name="civilite"/>Femme</li>
-                            <li><input type="radio" value="M" name="civilite"/>Homme</li>
+                            <li class="civilite"><input type="radio" value="F" name="civilite" id="fem"/><label for="fem">Femme</label></li>
+                            <li class="civilite"><input type="radio" value="M" name="civilite" id="hom"/><label for="hom">Homme</label></li>
                         </ul>
                         <!-- <label for="email">
                             Email
@@ -175,8 +176,11 @@
                 <li>
                     <a href="missions.html" title="Vers la page des Missions">Missions</a>
                 </li>
+                <!--<li>
+    <a href="./html/equipe.html" title="Vers la page de l'Equipe">Equipe</a>
+</li>-->
                 <li>
-                    <a href="equipe.html" title="Vers la page de l'Equipe">Equipe</a>
+                    <a href="./html/formations.html" title="Vers la page de Formations">Formations</a>
                 </li>
                 <li>
                     <a href="publications.html" title="Vers la page des Publications">Publications</a>

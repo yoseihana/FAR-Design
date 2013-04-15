@@ -193,11 +193,21 @@ p{
   font-family: @proLight;
 }
 
+strong{
+  font-family: @proBold;
+}
+
                       /*  HEADER  */
 
 .banner{
-  height: 151px;
+  //height: 151px;
   display: block;
+}
+
+.banner img{
+  .column(10);
+  .push(1);
+  margin-bottom: 1em;
 }
 
 header nav{
@@ -211,6 +221,7 @@ header nav{
   filter: @filterBlue;
   height: 37px;
   margin-top: 1em;
+  clear:both;
 }
 
 .submenu{
@@ -265,20 +276,16 @@ header a:hover{
   text-decoration: none;
 }
 
-header p{
-  //margin-bottom: 0;
-}
-
 nav a{
   font-family: @proRegular;
-  padding: 0.75em 1.5em 0.5em 1.5em;
+  padding: .75em 1.355em .5em 1.355em;
   display: inline-block;
 }
 
 /* hack Chrome / Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   nav a{
-    padding: 0.75em 1.475em 0.5em 1.475em;
+    padding: .75em 1.355em .5em 1.355em;
   }
 }
 
@@ -305,12 +312,12 @@ nav a{
 
 #home .slider{
   top:-1em;
-  height: 350px;
+  height: 250px;
 }
 
 #home .slider a{
   display: block;
-  height: 350px;
+  height: 250px;
 }
 
 figure{
@@ -328,7 +335,7 @@ figure{
 
 .infoSlider, .infoBanner{
   position: absolute;
-  top: 175px;
+  top: 75px;
   left: 25px;
   width: 250px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -352,7 +359,7 @@ figure{
   position: absolute;
   color: rgba(255, 255, 255, 0.8);
   font-family: @proRegular;
-  top: 315px;
+  top: 215px;
   font-size: 2em;
   cursor: pointer;
   padding: 0 0.5em;
@@ -545,7 +552,7 @@ footer h3{
 
 }
 
-.blocOuter, .blocCenter, aside{
+.blocOuter, .blocCenter, aside, fieldset{
   height: 375px;
   -webkit-border-radius: @webRadius;
   -moz-border-radius: @mozRadius;
@@ -573,19 +580,24 @@ footer h3{
   color:@blue;
 }
 
+.description{
+  width: 100%;
+}
+
 .blocOuter p, .blocCenter p{
-  padding: 0.5em 1em;
   color: white;
+  line-height: 1.25em;
+  .column(11);
+  .push(0.5);
+  padding: 0.5em 0em 1em 0;
+
 }
 
 .blocCenter h2, .blocOuter h2{
   color: #ffffff;
-  padding: 0.5em 1em 0.25em 0.6em;
-}
-
-.blocOuter p, .blocCenter p{
-  line-height: 1.25em;
-  padding-top: 0em;
+  .column(11);
+  .push(0.5);
+  padding: 1em 0 0.25em 0em;
 }
 
 .blocCenter{
@@ -665,12 +677,12 @@ footer h3{
 }
 
 .contentColonne div{
-  .column(8);
+  .column(8.5);
   margin-bottom: 1em;
 }
 
 .contentColonne figure{
-  .column(4);
+  .column(3.5);
 }
 
 #formations .infoBanner{
@@ -686,16 +698,24 @@ footer h3{
 }
 
 /*  Contact */
-#contacts section, #cours section{
+#contacts section, #cours section, .vitrineAudiovisuelle{
   .column(8);
   margin-top: 2em;
 }
 aside{
   .column(4);
-  margin-top: 6em;
+  margin-top: 5em;
   background-image: url(../img/blocCenter.png);
   height: 100%;
 }
+
+/* hack Chrome / Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  aside{
+    margin-top: 5em;
+  }
+}
+
 
 aside p:last-child{
   margin-bottom: 1em;
@@ -706,13 +726,18 @@ aside h1, aside dl{
   padding: 2em 1em 0 1em;
 }
 
-aside h2, aside dt, aside p{
+aside dt, aside p{
   font-family: @proRegular;
   color: @white;
 }
 
 aside h2, aside p{
   padding: 0.5em 1em 0 1.2em;
+}
+descr
+aside h2{
+  font-family:  @proBold;
+  color: @white;
 }
 
 aside dd{
@@ -726,6 +751,8 @@ aside p{
 
 aside fieldset, footer fieldset{
   border: none;
+  background-image: none;
+  box-shadow: none;
 }
 
 aside label{
@@ -738,32 +765,36 @@ aside label{
 aside input[type=submit]{
   margin-top: 0;
 }
-/*label{
-  display: block;
-  margin-bottom: 0.5em;
-  color: @deepRed;
-  font-family: @proBold;
-}*/
+
+label{
+  color: #ffffff;
+  font-family: @proRegular;
+}
 
 input{
   height: 25px;
   width:250px;
   margin-bottom: 1.5em;
-  border: 1px @grey dashed;
+  border: 1px @grey solid;
   background-color: #f9f9f9;
   display: block;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
-input[type="text"]:focus, textarea:focus, input[type="password"]:focus{
+input[type="text"]:focus, textarea:focus, input[type="password"]:focus, input[type="email"]:focus{
   background: @grey;
-  border:1px solid #f9f9f;
   color:@deepGrey;
 }
 
 textarea{
-  border: 1px @grey dashed;
+  border: 1px @grey solid;
   background-color: #f9f9f9;
   width: 95%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 /* hack Chrome / Safari */
@@ -781,9 +812,25 @@ form li{
   display: inline-block;
 }
 
+.civilite{
+  .column(12);
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
 input[type="radio"]{
-  width: 30px;
-  display: inline;
+  .column(1);
+  height: 15px;
+  margin-top: 0.5em;
+}
+
+input[type="radio"]:last-child{
+  margin-bottom: 1em;
+}
+
+li label{
+  .column(4);
+  font-family: @proLight;
 }
 
 input[type="submit"]{
@@ -794,12 +841,6 @@ input[type="submit"]{
   -moz-border-radius: @mozRadius;
   border-radius: @borderRadius;
   border: 1px solid @grey;
-  text-shadow: 0 1px 1px rgba(207, 207, 207, 0.75);
-  /*background: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background: linear-gradient(to bottom, #ffffff, #e6e6e6);*/
   background: @gardientOldBlue;
   background: @mozGardientBlue;
   background: @webGardientBlue;
@@ -812,11 +853,6 @@ input[type="submit"]{
 }
 
 input[type="submit"]:hover{
-  /*background: -moz-linear-gradient(top, #e6e6e6, #ffffff);
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#ffffff));
-  background: -webkit-linear-gradient(top, #e6e6e6, #ffffff);
-  background: -o-linear-gradient(top, #e6e6e6, #ffffff);
-  background: linear-gradient(to bottom, #e6e6e6, #ffffff);*/
   background: @gardientOldLight;
   background: @mozGardientLight;
   background: @webGardientLight;
@@ -844,6 +880,8 @@ input[type="submit"]:hover{
 fieldset{
   border: 1px solid @grey;
   padding: 1em;
+  background-image: url('../img/blocOuter.png');
+  height: 100%;
 }
 
 legend{
@@ -872,18 +910,26 @@ legend{
 
 /* Publications */
 #publications .blocOuter, #publications .blocCenter{
-  .column(5.5);
-  margin-bottom: 5em;
-  height: 500px;
+  .column(5);
+  margin-bottom: 2.5em;
 }
 
+
 #publications .impaire{
-  .push(1);
+  .push(2);
 }
 
 #publications header{
   background: none;
   color: @white;
+}
+
+#publications .description p{
+  height: 200px;
+}
+
+#publications .blocCenter, #publications .blocOuter{
+  height: 450px;
 }
 
 #publications .blocOuter:hover p,#publications .blocOuter:hover h2,#publications .blocCenter:hover p,#publications .blocCenter:hover h2{
@@ -895,7 +941,7 @@ legend{
 }
 
 #publications section span{
-  left: 175px;
+  left: 150px;
 }
 
 #publications figure{
@@ -903,8 +949,8 @@ legend{
 }
 
 #publications figure img{
-  .column(5);
-  .push(3.5);
+  .column(6);
+  .push(3);
   margin-bottom: 1em;
 }
 
@@ -912,12 +958,13 @@ legend{
   text-align: center;
   display: block;
   color: @white;
+  .column(10);
+  .push(1);
 }
 
 /* Membre */
 #membre form{
   margin-top: 1em;
-
 }
 
 #membre fieldset{
@@ -925,26 +972,21 @@ legend{
   .push(3.5)
 }
 
+#membre input{
+  margin-top: 0.5em;
+}
 #membre input[type="submit"]{
-    .column(5);
+  .column(5);
   .push(6);
 }
 
 /*  Audiovisuel */
-#audiovisuel .contentColonne{
-  .column(8);
-}
-
 .contentColonne iframe{
-  margin-top: 1em;
+  margin: 1em 0;
 }
 
 #audiovisuel aside{
-  margin-top: 2.5em;
-}
-
-.films{
- display: inline-block;
+  margin-top: 7.5em;
 }
 
 .films li{
@@ -953,10 +995,8 @@ legend{
   margin-bottom: 1em;
 }
 
-.films iframe,  .films div{
-  .column(6);
+.films div{
   margin-bottom: 1em;
-  height: 315px;
 }
 
 #audiovisuel section h3{
@@ -974,6 +1014,48 @@ legend{
 #audiovisuel .linkTo{
   display: inline-block;
   width: 100%;
+}
+
+#audiovisuel .linkTo p{
+  color: @lightBlue;
+}
+
+aside li{
+  list-style: square;
+  color: #ffffff;
+  margin-left: 1em;
+  font-family: @proBold;
+  font-size: 1.25em;
+  color: @blue;
+}
+
+.youtubeChaine div{
+  .column(5.75);
+  border-right: 1px solid @grey;
+  margin-bottom: 1em;
+}
+
+.youtubeChaine div:last-child{
+  .column(5.75);
+  border-right: none;
+}
+
+.youtubeChaine li{
+  .column(6);
+}
+
+.youtubeChaine figure{
+  .column(4.5);
+}
+
+.youtubeChaine p{
+  .column(7.5)
+}
+
+.youtubeChaine p{
+  font-size: 1.25em;
+  vertical-align: middle;
+  display: inline;
 }
 
 /* Cours */
@@ -1047,11 +1129,8 @@ aside li{
   height: 100px;
   text-align: center;
 }
-
-li.pdf{
-  /*background-image: url('../img/pdf.png');
-  background-repeat: no-repeat;
-  background-position: 0 -70px;*/
+div .thematique{
+  background-color: @white;
 }
 
 #cours .secondSidebar{
