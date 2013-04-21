@@ -199,73 +199,54 @@ strong{
 
                       /*  HEADER  */
 
-.banner{
-  //height: 151px;
-  display: block;
+body>header{
+  clear: both;
+  border-bottom: 5px solid #cfcfcf;
+  background-image: url('../img/footer.jpg');
+  height: 125px;
+  width: 100%;
 }
 
-.banner img{
-  .column(10);
-  .push(1);
-  margin-bottom: 1em;
+.headerContent{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.logo{
+  .column(4);
+}
+
+.logo img{
+  .column(4);
+  margin-top: 1em;
+}
+
+.logo p{
+  color: @white;
+  .column(8);
+  margin-top: 10%;
+  font-family: @proBold;
+  font-size: 1.5em;
 }
 
 header nav{
-  background: @gardientOldBlue;
-  background: @mozGardientBlue;
-  background: @webGardientBlue;
-  background: @webLinearGardientBlue;
-  background: @oLinearGardientBlue;
-  background: @msLinearGardientBlue;
-  background: @linearGardientBlue;
-  filter: @filterBlue;
+  .column(8);
   height: 37px;
   margin-top: 1em;
-  clear:both;
-}
-
-.submenu{
-  display: none;
-  z-index: 3;
-  background-color: @lightBlue;
-}
-.submenu a{
-  color: #ffffff;
-  padding: 0.75em 0.55em;
-}
-
-.submenu li:hover{
-  background: none;
-}
-
-.submenu a:hover{
-  color: @blue;
-}
-
-nav li:hover .submenu{
-  display: inline-block;
-  position: absolute;
 }
 
 header li{
-  float: left;
+  .column(3);
   height: 37px;
   position: relative;
 }
 
-header li:hover{
-  background: @gardientOldLight;
-  background: @mozGardientLight;
-  background: @webGardientLight;
-  background: @webLinearGardientLight;
-  background: @oLinearGardientLight;
-  background: @msLinearGardientLight;
-  background: @linearGardientLight;
-  filter: @filterLight;
+header li:active a{
+  border-bottom: 3px solid @lightBlue;
 }
 
-nav li:last-child{
-  border: none;
+header li:hover a{
+  border-bottom: 3px solid @white;
 }
 
 header a{
@@ -276,16 +257,21 @@ header a:hover{
   text-decoration: none;
 }
 
+#home nav li:first-child a{
+  border-bottom: 3px solid @lightBlue;
+}
+
 nav a{
-  font-family: @proRegular;
+  font-family: @proBold;
   padding: .75em 1.355em .5em 1.355em;
   display: inline-block;
+  min-width: 100px;
 }
 
 /* hack Chrome / Safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   nav a{
-    padding: .75em 1.355em .5em 1.355em;
+    padding: .75em 0 .5em 0;
   }
 }
 
@@ -300,10 +286,13 @@ nav a{
 
                 /* SLIDER */
 .slider{
-  border: 0.2em solid @blue;
+  border: 0.2em solid @grey;
   height: 175px;
   position: relative;
-  border-top: none;
+}
+
+#home .slider img{
+  margin-top: -1em;
 }
 
 .slider img, header img, .linkTo img, .liens img{
@@ -311,7 +300,6 @@ nav a{
 }
 
 #home .slider{
-  top:-1em;
   height: 250px;
 }
 
@@ -507,6 +495,10 @@ footer nav{
   margin-left: 1em;
 }
 
+#home footer li:first-child a{
+  border: none;
+}
+
 h3, legend{
   color: @white;
   font-family: @proBold;
@@ -533,8 +525,21 @@ footer a{
 }
 
 footer h3{
-  border-bottom: 1px solid @deepGrey;
+  border-bottom: 1px solid @lightBlue;
   padding: 0.5em;
+}
+
+footer .copy{
+  clear: both;
+  background-color: black;
+  color: @grey;
+  font-size: 0.75em;
+  padding: 0.5em;
+}
+
+.copy a{
+  margin-left: 0em;
+  color: @lightBlue;
 }
 
 /* Missions */
@@ -549,7 +554,6 @@ footer h3{
 .blocMissions div{
   .column(4);
   margin-bottom:2em;
-
 }
 
 .blocOuter, .blocCenter, aside, fieldset{
@@ -590,14 +594,13 @@ footer h3{
   .column(11);
   .push(0.5);
   padding: 0.5em 0em 1em 0;
-
+  text-align: left;
 }
 
 .blocCenter h2, .blocOuter h2{
   color: #ffffff;
-  .column(11);
-  .push(0.5);
   padding: 1em 0 0.25em 0em;
+  margin-left: 0.5em;
 }
 
 .blocCenter{
@@ -645,19 +648,6 @@ footer h3{
 
 .contentEquipe img{
   height: 200px;
-}
-
-.contentEquipe h1{
-  height: 45px;
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  font-size: 1.5em;
-}
-
-#equipe h2{
-  font-size: 1em;
-  color: @lightBlue;
-  margin-bottom: 0.25em;
 }
 
 .contentEquipe p{
@@ -716,7 +706,6 @@ aside{
   }
 }
 
-
 aside p:last-child{
   margin-bottom: 1em;
 }
@@ -734,7 +723,7 @@ aside dt, aside p{
 aside h2, aside p{
   padding: 0.5em 1em 0 1.2em;
 }
-descr
+
 aside h2{
   font-family:  @proBold;
   color: @white;
@@ -888,6 +877,36 @@ legend{
   padding: 0.5em;
 }
 
+.contactEquipe{
+  margin-top: 2em;
+  //position: absolute;
+}
+
+.contactEquipe h1{
+  margin-bottom: 0.25em;
+}
+
+.contactEquipe h2{
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+.contactEquipe .poste{
+  font-size: 1em;
+  color: @lightBlue;
+  font-family: @proBold;
+}
+
+.contactEquipe p{
+  margin-bottom: 0em;
+}
+
+.contactEquipe div{
+  .column(6);
+  height: 100px;
+}
+
 /* Liens */
 .lien img{
   .column(3);
@@ -895,8 +914,16 @@ legend{
   margin-right: 1em;
 }
 
-.lienLeft, .lienRight{
+.lienLeft{
+  .column(5.75);
+  border-right: 1px solid @lightBlue;
+}
+
+.lienRight{
   .column(6);
+}
+
+.lienLeft, .lienRight{
   margin-top: 2em;
 }
 
@@ -906,20 +933,16 @@ legend{
 
 .lien{
   margin-bottom: 3em;
+  .column(12);
 }
 
 /* Publications */
 #publications .blocOuter, #publications .blocCenter{
-  .column(5);
-  margin-bottom: 2.5em;
+  .column(3);
+  height: 300px;
 }
 
-
-#publications .impaire{
-  .push(2);
-}
-
-#publications header{
+#publications .container header{
   background: none;
   color: @white;
 }
@@ -928,40 +951,46 @@ legend{
   height: 200px;
 }
 
-#publications .blocCenter, #publications .blocOuter{
-  height: 450px;
-}
-
-#publications .blocOuter:hover p,#publications .blocOuter:hover h2,#publications .blocCenter:hover p,#publications .blocCenter:hover h2{
-  color: @white;
-}
-
-#publications .blocOuter:hover span, #publications .blocCenter:hover span{
-  color: @blue;
-}
-
 #publications section span{
-  left: 150px;
-}
-
-#publications figure{
-    .column(12);
+  left: 10px;
 }
 
 #publications figure img{
-  .column(6);
-  .push(3);
+  .column(3);
+  .push(4);
   margin-bottom: 1em;
+}
+
+.publicationsContent a p{
+  .column(4);
+  .push(3);
+  text-align: center;
+  color: @deepRed;
 }
 
 #publications .blocOuter a, #publications .blocCenter a{
   text-align: center;
   display: block;
   color: @white;
-  .column(10);
-  .push(1);
+  .column(11);
+  .push(0.5);
 }
 
+#publications .publicationsIntro div, .publicationsContent div {
+  margin-bottom: 2em;
+}
+
+.publicationsContent div{
+  clear: both;
+}
+
+.publicationsIntro h2{
+  text-align: left;
+  margin-left: 0.25em;
+}
+.publicationsIntro a:hover{
+  text-decoration: none;
+}
 /* Membre */
 #membre form{
   margin-top: 1em;
@@ -1031,7 +1060,7 @@ aside li{
 
 .youtubeChaine div{
   .column(5.75);
-  border-right: 1px solid @grey;
+  border-right: 1px solid @lightBlue;
   margin-bottom: 1em;
 }
 
